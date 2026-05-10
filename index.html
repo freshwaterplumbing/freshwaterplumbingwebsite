@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Freshwater Plumbing | Hot Water Done Right</title>
+  <meta name="description" content="Freshwater Plumbing - Tankless water heaters, water heater installs, plumbing repairs, drains, and emergency plumbing in Los Angeles and Santa Clarita." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --black:#050505;
+      --dark:#0b0b0d;
+      --panel:#111114;
+      --panel2:#17171c;
+      --red:#d00000;
+      --red2:#ff1a1a;
+      --text:#f6f6f6;
+      --muted:#b5b5b5;
+      --line:rgba(255,255,255,.12);
+      --glass:rgba(0,0,0,.68);
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:var(--black);
+      color:var(--text);
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif;
+      overflow-x:hidden;
+    }
+    a{color:inherit;text-decoration:none}
+
+    .top-alert{
+      background:linear-gradient(90deg,#6b0000,var(--red),#6b0000);
+      text-align:center;
+      padding:9px 14px;
+      font-weight:900;
+      letter-spacing:.08em;
+      font-size:13px;
+      text-transform:uppercase;
+    }
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:rgba(0,0,0,.82);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid rgba(255,255,255,.12);
+    }
+    .nav{
+      max-width:1220px;
+      margin:auto;
+      padding:16px 22px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+    .brand-logo{
+      width:190px;
+      max-width:32vw;
+      height:auto;
+      display:block;
+      filter:drop-shadow(0 0 16px rgba(255,255,255,.18));
+    }
+    nav{
+      display:flex;
+      align-items:center;
+      gap:22px;
+      font-size:13px;
+      font-weight:900;
+      text-transform:uppercase;
+    }
+    nav a{opacity:.9}
+    nav a:hover{color:var(--red2)}
+    .nav-call{
+      padding:12px 18px;
+      border-radius:999px;
+      background:var(--red);
+      box-shadow:0 0 28px rgba(208,0,0,.45);
+    }
+
+    .hero{
+      position:relative;
+      min-height:88vh;
+      display:grid;
+      align-items:center;
+      overflow:hidden;
+      background:
+        linear-gradient(90deg,rgba(0,0,0,.93),rgba(0,0,0,.62),rgba(0,0,0,.2)),
+        radial-gradient(circle at 80% 35%,rgba(255,0,0,.38),transparent 34%),
+        url('https://images.unsplash.com/photo-1556912173-3bb406ef7e77?auto=format&fit=crop&w=1800&q=85') center/cover no-repeat;
+    }
+    .hero:after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(0deg,#050505 0%,transparent 20%,transparent 70%,rgba(0,0,0,.5) 100%);
+      pointer-events:none;
+    }
+    .hero-inner{
+      position:relative;
+      z-index:2;
+      max-width:1220px;
+      margin:auto;
+      padding:70px 22px;
+      width:100%;
+    }
+    .badge-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-bottom:18px;
+    }
+    .badge{
+      border:1px solid rgba(255,255,255,.22);
+      background:rgba(0,0,0,.52);
+      padding:10px 13px;
+      border-radius:999px;
+      font-size:12px;
+      font-weight:900;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+    }
+    h1{
+      font-family:"Bebas Neue",Inter,sans-serif;
+      font-size:clamp(62px,10vw,148px);
+      line-height:.86;
+      margin:0;
+      letter-spacing:.02em;
+      text-shadow:0 0 28px #000;
+    }
+    h1 em{
+      display:block;
+      color:var(--red2);
+      font-style:normal;
+      text-shadow:0 0 34px rgba(255,0,0,.55);
+    }
+    .hero p{
+      max-width:720px;
+      font-size:clamp(18px,2.4vw,25px);
+      color:#e6e6e6;
+      line-height:1.45;
+      margin:20px 0 0;
+    }
+    .actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-top:30px;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:16px 26px;
+      border-radius:14px;
+      font-weight:900;
+      text-transform:uppercase;
+      letter-spacing:.06em;
+      border:1px solid rgba(255,255,255,.12);
+      transition:.25s ease;
+    }
+    .btn-red{background:var(--red);box-shadow:0 0 32px rgba(208,0,0,.48)}
+    .btn-dark{background:rgba(255,255,255,.08);backdrop-filter:blur(10px)}
+    .btn:hover{transform:translateY(-3px);filter:brightness(1.15)}
+
+    .stats{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:14px;
+      max-width:760px;
+      margin-top:42px;
+    }
+    .stat{
+      background:rgba(0,0,0,.6);
+      border:1px solid rgba(255,255,255,.14);
+      border-radius:18px;
+      padding:18px;
+    }
+    .stat strong{
+      display:block;
+      color:var(--red2);
+      font-size:25px;
+      font-weight:900;
+    }
+    .stat span{font-size:13px;color:var(--muted);font-weight:800;text-transform:uppercase}
+
+    section{
+      max-width:1220px;
+      margin:auto;
+      padding:86px 22px;
+    }
+    .section-title{
+      display:flex;
+      align-items:end;
+      justify-content:space-between;
+      gap:24px;
+      margin-bottom:34px;
+    }
+    h2{
+      font-family:"Bebas Neue",Inter,sans-serif;
+      font-size:clamp(42px,6vw,78px);
+      line-height:.95;
+      margin:0;
+      letter-spacing:.03em;
+    }
+    h2 span{color:var(--red2)}
+    .section-title p{
+      max-width:480px;
+      color:var(--muted);
+      line-height:1.55;
+      margin:0;
+      font-weight:600;
+    }
+
+    .service-grid{
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:18px;
+    }
+    .service-card{
+      min-height:330px;
+      border-radius:24px;
+      overflow:hidden;
+      position:relative;
+      border:1px solid var(--line);
+      background:#111;
+      box-shadow:0 18px 60px rgba(0,0,0,.35);
+    }
+    .service-card:before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(0deg,rgba(0,0,0,.9),rgba(0,0,0,.18));
+      z-index:1;
+    }
+    .service-card img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      position:absolute;
+      inset:0;
+      transition:.5s ease;
+      filter:saturate(1.1) contrast(1.05);
+    }
+    .service-card:hover img{transform:scale(1.08)}
+    .service-content{
+      position:absolute;
+      left:0;right:0;bottom:0;
+      z-index:2;
+      padding:22px;
+    }
+    .service-content h3{
+      margin:0 0 8px;
+      font-size:22px;
+      line-height:1.1;
+    }
+    .service-content p{
+      margin:0;
+      color:#d1d1d1;
+      line-height:1.45;
+      font-size:14px;
+    }
+
+    .service-area-banner{
+      background:linear-gradient(135deg,rgba(255,255,255,.08),rgba(255,255,255,.03));
+      border:1px solid var(--line);
+      border-radius:30px;
+      padding:45px 35px;
+      text-align:center;
+      box-shadow:0 20px 60px rgba(0,0,0,.35);
+    }
+    .service-area-banner h3{
+      font-size:42px;
+      margin:0 0 20px;
+      font-family:"Bebas Neue",Inter,sans-serif;
+      letter-spacing:.04em;
+    }
+    .service-area-tags{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-top:20px;
+    }
+    .service-tag{
+      background:rgba(0,0,0,.45);
+      border:1px solid rgba(255,255,255,.12);
+      padding:14px 22px;
+      border-radius:999px;
+      font-weight:900;
+      font-size:15px;
+      letter-spacing:.04em;
+    }
+    .service-tag:before{content:"●";color:var(--red2);margin-right:8px}
+
+    .about-band{
+      max-width:none;
+      background:
+        linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.55)),
+        url('https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?auto=format&fit=crop&w=1800&q=85') center/cover no-repeat;
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+    }
+    .about-inner{
+      max-width:1220px;
+      margin:auto;
+      padding:90px 22px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:40px;
+      align-items:center;
+    }
+    .glass{
+      background:rgba(0,0,0,.66);
+      border:1px solid rgba(255,255,255,.15);
+      border-radius:28px;
+      padding:34px;
+      backdrop-filter:blur(12px);
+    }
+    .glass p{color:#dfdfdf;line-height:1.7;font-size:17px}
+
+    .quote{
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      gap:24px;
+      align-items:start;
+    }
+    .quote-card{
+      background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.03));
+      border:1px solid var(--line);
+      border-radius:28px;
+      padding:30px;
+    }
+    label{display:block;font-weight:900;margin:14px 0 8px;text-transform:uppercase;font-size:12px;letter-spacing:.08em;color:#ddd}
+    input,select,textarea{
+      width:100%;
+      background:#0d0d10;
+      border:1px solid rgba(255,255,255,.14);
+      color:white;
+      border-radius:14px;
+      padding:15px;
+      font-size:16px;
+      outline:none;
+    }
+    textarea{min-height:130px;resize:vertical}
+    button{cursor:pointer;width:100%;border:0;margin-top:18px}
+
+    footer{
+      background:#000;
+      border-top:3px solid var(--red);
+      padding:50px 22px 90px;
+      text-align:center;
+      color:var(--muted);
+    }
+    footer strong{color:white}
+
+    .mobile-bar{
+      position:fixed;
+      left:12px;
+      right:12px;
+      bottom:12px;
+      z-index:60;
+      display:none;
+      grid-template-columns:1fr 1fr 1fr;
+      gap:8px;
+      background:rgba(0,0,0,.78);
+      backdrop-filter:blur(12px);
+      border:1px solid rgba(255,255,255,.16);
+      border-radius:18px;
+      padding:8px;
+    }
+    .mobile-bar a{
+      text-align:center;
+      background:var(--red);
+      border-radius:13px;
+      padding:12px 8px;
+      font-weight:900;
+      font-size:13px;
+    }
+
+    @media(max-width:980px){
+      nav{display:none}
+      .service-grid{grid-template-columns:repeat(2,1fr)}
+      .map-wrap,.about-inner,.quote{grid-template-columns:1fr}
+      .reviews{grid-template-columns:1fr}
+      .section-title{display:block}
+      .section-title p{margin-top:12px}
+      .stats{grid-template-columns:1fr}
+      .mobile-bar{display:grid}
+    }
+    @media(max-width:620px){
+      .hero{min-height:82vh}
+      .service-grid{grid-template-columns:1fr}
+      .areas{grid-template-columns:1fr}
+      .pin:after{font-size:10px}
+      .p6{left:310px}.p3{left:280px}.p5{left:270px}
+    }
+  </style>
+</head>
+<body>
+  <div class="top-alert">Freshwater Plumbing • Hot Water Done Right • Call 818-605-7343</div>
+
+  <header>
+    <div class="nav">
+      <a class="brand" href="#top" aria-label="Freshwater Plumbing home">
+        <img class="brand-logo" src="/mnt/data/logo.png" alt="Freshwater Plumbing logo">
+      </a>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#areas">Areas</a>
+        <a href="#about">About</a>
+        <a href="#quote">Estimate</a>
+        <a href="https://www.tiktok.com/@freshwaterplumbing" target="_blank">TikTok</a>
+        <a class="nav-call" href="tel:+18186057343">Call Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="badge-row">
+          <div class="badge">Tankless Experts</div>
+          <div class="badge">Water Heaters</div>
+          <div class="badge">Emergency Plumbing</div>
+        </div>
+        <h1>Hot Water.<em>Done Right.</em></h1>
+        <p>Premium plumbing, tankless installations, water heaters, drain services, and fast plumbing repairs throughout Los Angeles, Santa Clarita, San Fernando Valley, Marina Del Rey, and Malibu.</p>
+        <div class="actions">
+          <a class="btn btn-red" href="tel:+18186057343">Call 818-605-7343</a>
+          <a class="btn btn-dark" href="#quote">Free Estimate</a>
+        </div>
+        <div class="stats">
+          <div class="stat"><strong>Same Day</strong><span>Service Available</span></div>
+          <div class="stat"><strong>Tankless</strong><span>Install & Repair</span></div>
+          <div class="stat"><strong>LA + SCV</strong><span>Service Areas</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="section-title">
+        <h2>Plumbing <span>Services</span></h2>
+        <p>Generated luxury-style visuals, bold service cards, and a cleaner layout built for customers on mobile.</p>
+      </div>
+      <div class="service-grid">
+        <article class="service-card"><img src="/mnt/data/tankless_real.png" alt="Realistic tankless water heater installation"><div class="service-content"><h3>Tankless Water Heaters</h3><p>Upgrade to endless hot water with a clean modern installation.</p></div></article>
+        <article class="service-card"><img src="/mnt/data/water_heater_real.png" alt="Realistic water heater installation"><div class="service-content"><h3>Water Heater Installation</h3><p>Tank replacements, valves, expansion tanks, and clean hookups.</p></div></article>
+        <article class="service-card"><img src="/mnt/data/faucet_real.png" alt="Luxury black faucet fixture"><div class="service-content"><h3>Faucets & Fixtures</h3><p>Modern black faucet, sink, shower, and fixture installations.</p></div></article>
+        <article class="service-card"><img src="/mnt/data/drain_real.png" alt="Drain cleaning plumbing service"><div class="service-content"><h3>Drain Cleaning</h3><p>Clogs, stoppages, sewer diagnostics, and hydro jetting options.</p></div></article>
+      </div>
+    </section>
+
+    <section id="areas">
+      <div class="section-title">
+        <h2>Service <span>Areas</span></h2>
+        <p>Freshwater Plumbing proudly serves homes and businesses throughout Los Angeles and surrounding valley areas.</p>
+      </div>
+
+      <div class="service-area-banner">
+        <h3>Areas We Serve</h3>
+        <div class="service-area-tags">
+          <div class="service-tag">San Fernando Valley</div>
+          <div class="service-tag">Santa Clarita Valley</div>
+          <div class="service-tag">Los Angeles</div>
+        </div>
+      </div>
+    </section>
+
+    <div id="about" class="about-band">
+      <div class="about-inner">
+        <div>
+          <h2>Clean Work.<br><span>Fast Response.</span></h2>
+        </div>
+        <div class="glass">
+          <p>Freshwater Plumbing provides professional plumbing solutions with clean workmanship, fast response times, and quality installations.</p>
+          <p>We specialize in tankless systems, water heaters, plumbing repairs, fixture upgrades, drain cleaning, and emergency plumbing services.</p>
+        </div>
+      </div>
+    </div>
+
+    
+
+    <section id="quote">
+      <div class="quote">
+        <div>
+          <h2>Request A <span>Free Estimate</span></h2>
+          <p style="color:var(--muted);line-height:1.7;font-size:18px;">Send your plumbing issue and Freshwater Plumbing can follow up by phone, text, or email.</p>
+          <div class="actions">
+            <a class="btn btn-red" href="tel:+18186057343">Call Now</a>
+            <a class="btn btn-dark" href="sms:+18186057343">Text Us</a>
+          </div>
+        </div>
+        <form class="quote-card" id="quoteForm">
+          <label>Name</label>
+          <input name="name" placeholder="Your name" required>
+          <label>Phone</label>
+          <input name="phone" placeholder="Your phone number">
+          <label>Service Needed</label>
+          <select name="service">
+            <option>Tankless Water Heater</option>
+            <option>Water Heater Installation</option>
+            <option>Drain Cleaning</option>
+            <option>Leak Repair</option>
+            <option>Fixture Installation</option>
+            <option>Emergency Plumbing</option>
+          </select>
+          <label>Message</label>
+          <textarea name="message" placeholder="Tell us what you need help with" required></textarea>
+          <button class="btn btn-red" type="submit">Send Estimate Request</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>Freshwater Plumbing</strong><br>
+    Los Angeles, Santa Clarita, San Fernando Valley, Marina Del Rey & Malibu<br><br>
+    <a href="tel:+18186057343">818-605-7343</a> • <a href="mailto:freshwaterplumbingpro@gmail.com">freshwaterplumbingpro@gmail.com</a> • <a href="https://www.tiktok.com/@freshwaterplumbing" target="_blank">TikTok</a><br><br>
+    © 2026 Freshwater Plumbing. All rights reserved.
+  </footer>
+
+  <div class="mobile-bar">
+    <a href="tel:+18186057343">Call</a>
+    <a href="sms:+18186057343">Text</a>
+    <a href="#quote">Estimate</a>
+  </div>
+
+  <script>
+    const BUSINESS_EMAIL = "freshwaterplumbingpro@gmail.com";
+    document.getElementById("quoteForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      const data = new FormData(e.target);
+      const subject = encodeURIComponent("Freshwater Plumbing - Estimate Request");
+      const body = encodeURIComponent(
+        `Name: ${data.get("name")}\nPhone: ${data.get("phone")}\nService: ${data.get("service")}\n\nMessage:\n${data.get("message")}\n`
+      );
+      window.location.href = `mailto:${BUSINESS_EMAIL}?subject=${subject}&body=${body}`;
+    });
+  </script>
+</body>
+</html>
