@@ -552,5 +552,12 @@
       window.location.href = `mailto:${BUSINESS_EMAIL}?subject=${subject}&body=${body}`;
     });
   </script>
+  <script>
+    // Remove tracking text like ?utm_source=chatgpt.com from the address bar
+    if (window.location.search) {
+      window.history.replaceState({}, document.title, window.location.pathname + window.location.hash);
+    }
+  </script>
+
 </body>
 </html>
